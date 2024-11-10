@@ -1,0 +1,13 @@
+******* factory dataset (classification) ********
+
+This is a dataset collected from a manufacturing company, it contains 20000 data points with 9 columns.
+
+Unique ID: Unique identifier ranging from 1 to 20000
+Product ID: The serial number of product
+Quality: Consist of letter L, M and H for low, medium and high quality
+Ambient T: Environment temperature
+Process T: Machine temperature
+Rotation Speed: Rotational speed of machine when running
+Torque: Measure of the turning force
+Tool Wear: Tool wear time estimated for the machine
+Machine Status: Labels indicate machine failure or not, 1 means failure, 0 means normal.
