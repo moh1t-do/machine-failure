@@ -20,3 +20,9 @@ streamlit run main.py
 ```
 
 Make sure to activate the virtual environment every time you work on this project to ensure all dependencies are correctly managed.
+
+# Future Aspects
+- Live graphs
+- Pipelines
+- Notification system
+- Realtime analysis simulation
