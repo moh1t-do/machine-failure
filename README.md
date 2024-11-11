@@ -1,6 +1,6 @@
 # Server Setup
 
-Follow these steps to set up the server:
+Follow these steps to set up the server, to be done within the server folder:
 
 ```bash
 # Update pip to the latest version
