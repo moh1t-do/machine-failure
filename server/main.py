@@ -7,13 +7,13 @@ clf = joblib.load('src/model/gradient_boosting_model.joblib')
 
 # Define the primary feature list for user input
 primary_features = [
-    'Quality',
     'Product Code',
-    'Process T (C)',
+    'Quality',
     'Ambient T (C)',
-    'Tool Lifespan (min)',
+    'Process T (C)',
     'Rotation Speed (rpm)',
-    'Torque (Nm)'
+    'Torque (Nm)',
+    'Tool Lifespan (min)',
 ]
 
 # Title and description
