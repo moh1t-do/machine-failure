@@ -13,7 +13,7 @@ primary_features = [
     'Process T (C)',
     'Rotation Speed (rpm)',
     'Torque (Nm)',
-    'Tool Lifespan (min)',
+    'Operation Time (min)',  
 ]
 
 # Title and description
@@ -42,17 +42,17 @@ for feature in primary_features:
 # Extract relevant inputs for derived features
 process_temp = input_data[primary_features.index('Process T (C)')]
 ambient_temp = input_data[primary_features.index('Ambient T (C)')]
-tool_lifespan = input_data[primary_features.index('Tool Lifespan (min)')]
+operation_time = input_data[primary_features.index('Operation Time (min)')]  # Changed variable to Operation Time
 rotation_speed = input_data[primary_features.index('Rotation Speed (rpm)')]
 torque = input_data[primary_features.index('Torque (Nm)')]
 
 # Calculate derived features
 t_difference_squared = (process_temp - ambient_temp) ** 2
-tool_lifespan_per_temp_increase = tool_lifespan / t_difference_squared if t_difference_squared != 0 else 0
+operation_time_per_temp_increase = operation_time / t_difference_squared if t_difference_squared != 0 else 0  # Changed variable name
 horsepower = (torque * rotation_speed) / 5252
 
 # Append derived features to the input data
-input_data.extend([t_difference_squared, tool_lifespan_per_temp_increase, horsepower])
+input_data.extend([t_difference_squared, operation_time_per_temp_increase, horsepower])
 
 # Convert input data to a numpy array for prediction
 input_data = np.array(input_data).reshape(1, -1)
